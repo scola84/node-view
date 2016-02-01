@@ -8,9 +8,8 @@ const Element = require('./lib/element');
 
 class Module extends DI.Module {
   configure() {
-    this.inject(Dispatcher).with(
-      this.provider(Element)
-    );
+    this.inject(Dispatcher)
+      .insertArgument(4, this.provider(Element));
 
     if (window) {
       this.inject(Element).with(

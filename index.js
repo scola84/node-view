@@ -12,6 +12,9 @@ class Module extends DI.Module {
       .insertArgument(5, this.provider(Element));
 
     if (window) {
+      this.inject(Dispatcher)
+        .insertArgument(6, this.value(window));
+        
       this.inject(Element).with(
         this.value(window)
       );

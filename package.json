@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@scola/di": "^2.0.0",
-    "@scola/events": "^1.1.2"
+    "@scola/events": "^1.1.2",
+    "lodash.merge": "^4.3.1"
   }
 }

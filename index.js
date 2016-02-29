@@ -9,12 +9,12 @@ const Element = require('./lib/element');
 class Module extends DI.Module {
   configure() {
     this.inject(Dispatcher)
-      .insertArgument(5, this.provider(Element));
+      .insertArgument(1, this.provider(Element));
 
     if (window) {
       this.inject(Dispatcher)
-        .insertArgument(6, this.value(window));
-        
+        .insertArgument(2, this.value(window));
+
       this.inject(Element).with(
         this.value(window)
       );
